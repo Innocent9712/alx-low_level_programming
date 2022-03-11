@@ -6,7 +6,7 @@
 /**
  * main - prints to string
  *
- * Description: Prints value of n and its sign
+ * Description: Prints last digit of n with some conditions.
  *
  * Return: 0
  */
