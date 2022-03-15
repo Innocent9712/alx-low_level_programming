@@ -2,7 +2,7 @@
 
 /**
  * print_sign - checks if input is a positive, negative or zero
- * @c : parameter for the function ASCII value
+ * @n : parameter for the function ASCII value
  *
  * Description: It receives an input and checks if its value.
  *
