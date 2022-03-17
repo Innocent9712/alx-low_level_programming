@@ -14,7 +14,7 @@ void more_numbers(void)
 	while (counter < 10)
 	{
 		num = 0;
-		
+
 		while (num < 14)
 		{
 			_putchar(num + '0');
