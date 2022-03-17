@@ -5,7 +5,7 @@
  * Return: void
  */
 
-void print_numbers(void)
+void more_numbers(void)
 {
 	int num, counter;
 
