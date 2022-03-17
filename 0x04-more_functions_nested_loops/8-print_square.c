@@ -1,29 +1,28 @@
 #include "main.h"
 /**
- * print_square - print a square
- * @n: number of times parameter
- *
- * Return: void
+ * print_square - check for a digit
+ * @n : number of _ to be printed
+ * Return:void
  */
 
 void print_square(int n)
 {
-	int val, i;
 
-	if (n == 0)
-	{
-		_putchar('\n');
-	}
+	int i = 0, ii;
 
-	
-	val = n;
-	while (val > 0)
+	while (i < n && n > 0)
 	{
-		for (i = 0; i < n; i++)
+		ii = 0;
+		while (ii < n)
 		{
 			_putchar('#');
+			ii++;
 		}
+
 		_putchar('\n');
-		val--;
+		i++;
 	}
+	if (i == 0)
+		_putchar('\n');
+
 }
