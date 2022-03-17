@@ -21,6 +21,7 @@ void print_numbers(void)
 			num++;
 		}
 		_putchar('\n');
+		counter++;
 	}
 	_putchar('\n');
 }
