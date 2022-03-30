@@ -1,4 +1,4 @@
-#include "main.c"
+#include "main.h"
 /**
  * last_index - returns the last index of a string (counts the null char)
  * @s: pointer the string
