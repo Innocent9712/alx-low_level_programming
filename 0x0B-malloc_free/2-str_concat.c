@@ -1,12 +1,12 @@
 #include <stdlib.h>
 /**
- * strlen - get string length
+ * strlent - get string length
  * @str: string
  *
  * Return: number
  */
 
-int strlen(char *str)
+int strlent(char *str)
 {
 	int size;
 
@@ -35,8 +35,8 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "\0";
 
-	size1 = strlen(s1);
-	size2 = strlen(s2);
+	size1 = strlent(s1);
+	size2 = strlent(s2);
 
 	concat_str = malloc(sizeof(char) * (size1 + size2));
 
