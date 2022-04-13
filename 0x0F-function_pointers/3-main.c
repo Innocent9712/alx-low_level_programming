@@ -10,7 +10,7 @@
  * Return: 0
  */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	int (*func)(int, int);
 	int num1, num2;
