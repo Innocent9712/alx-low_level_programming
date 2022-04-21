@@ -9,7 +9,7 @@ void free_list(list_t *head)
 {
 	list_t *current, *nxt;
 
-	current = head:
+	current = head;
 
 	while (current != NULL)
 	{
