@@ -9,6 +9,8 @@ void free_list(list_t *head)
 {
 	list_t *current, *nxt;
 
+	current = head:
+
 	while (current != NULL)
 	{
 		nxt = curret->next
