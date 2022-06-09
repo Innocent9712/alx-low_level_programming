@@ -9,18 +9,10 @@
 size_t dlistint_len(const dlistint_t *h)
 {
 	size_t num = 0;
-	dlistint_t *current;
-
-	current = malloc(sizeof(dlistint_t));
-	current->prev = h->prev;
-	current->n = h->n;
-	current->next = h->next;
-
-	while (current != NULL)
+	while (h)
 	{
 		num++;
-		current = current->next;
+		h = h->next;
 	}
-	free(current);
 	return (num);
 }
