@@ -16,13 +16,13 @@ hash_node_t *new_node(const char *key, const char *value)
 	if (temp == NULL)
 		return (NULL);
 
-	temp->key = strdup(key);
+	temp->key = (char *)key;
 	if (temp->key == NULL)
 	{
 		free(temp);
 		return (NULL);
 	}
-	temp->value = strdup(value);
+	temp->value = (char *)value;
 	if (temp->value == NULL)
 	{
 		free(temp->key);
@@ -59,7 +59,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp(current->key, key) == 0)
 		{
-			current->value = strdup(value);
+			current->value = (char *)value;
 			return (1);
 		}
 		current = current->next;
