@@ -1,34 +1,35 @@
-#include "hash_tables.h"
-/**
- * hash_table_delete - delete a hash table
- * @ht: hash table to delete
- */
+/*
+ * File: 6-hash_table_delete.c
+ * Auth: Asrat Asmelash
+*/
 
+#include "hash_tables.h"
+
+/**
+ * hash_table_delete - Deletes a hash table.
+ * @ht: A pointer to a hash table.
+ */
 void hash_table_delete(hash_table_t *ht)
 {
-	hash_node_t *current, *temp;
+	hash_table_t *head = ht;
+	hash_node_t *node, *tmp;
 	unsigned long int i;
-
-	if (ht == NULL || ht->array == NULL || ht->size == 0)
-		return;
 
 	for (i = 0; i < ht->size; i++)
 	{
-		current = ht->array[i];
-
-		while (current != NULL)
+		if (ht->array[i] != NULL)
 		{
-			temp = current->next;
-			free(current->key);
-			free(current->value);
-			free(current);
-			current = temp;
+			node = ht->array[i];
+			while (node != NULL)
+			{
+				tmp = node->next;
+				free(node->key);
+				free(node->value);
+				free(node);
+				node = tmp;
+			}
 		}
 	}
-	free(temp);
-	free(current);
-	free(ht->array);
-	ht->array = NULL;
-	ht->size = 0;
-	free(ht);
+	free(head->array);
+	free(head);
 }
